@@ -45,16 +45,13 @@ function IEProcess() {
 		var max_col_no = 3;
 		if ($(window).width() < 768) max_col_no = 2; //if less than 768, change to 2 columns
 		
-		for(i=0; i<reports_items.length; i++) {
-			
+		for(i=0; i<reports_items.length; i++) {			
 			  if (col_no > max_col_no) {
 				col_no = 1;
 				row_no = row_no +1;
-			  }
-			  
+			  }			  
 			  var style = "-ms-grid-column: " + col_no + "; -ms-grid-row: " + row_no;			
-			  reports_items[i].setAttribute("style", style);
-			  
+			  reports_items[i].setAttribute("style", style);			  
 			  col_no++;
 		}
 	}	
